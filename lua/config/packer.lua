@@ -16,6 +16,10 @@ require("packer").startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use "windwp/nvim-autopairs"
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use {
+    "nvim-telescope/telescope.nvim", tag = "0.1.0",
+    requires = { { "nvim-lua/plenary.nvim" } },
+  }
   use "neovim/nvim-lspconfig"
   use "lukas-reineke/lsp-format.nvim"
   use "hrsh7th/nvim-cmp"

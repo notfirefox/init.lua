@@ -7,3 +7,4 @@ vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.wrap = false
 vim.opt.colorcolumn = "90"
+vim.g.mapleader = " "
