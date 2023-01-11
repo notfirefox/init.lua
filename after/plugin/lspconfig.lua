@@ -16,9 +16,6 @@ lspconfig.clangd.setup({
   capabilities = capabilities
 })
 
--- deno
-lspconfig.denols.setup {}
-
 -- lua
 lspconfig.sumneko_lua.setup({
   on_attach = lspformat.on_attach,
