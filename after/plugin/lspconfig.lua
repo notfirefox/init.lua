@@ -16,6 +16,12 @@ lspconfig.clangd.setup({
   capabilities = capabilities
 })
 
+-- go
+lspconfig.gopls.setup({
+  on_attach = lspformat.on_attach,
+  capabilities = capabilities
+})
+
 -- lua
 lspconfig.sumneko_lua.setup({
   on_attach = lspformat.on_attach,
