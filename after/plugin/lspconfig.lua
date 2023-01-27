@@ -44,9 +44,3 @@ lspconfig.sumneko_lua.setup({
     }
   }
 })
-
--- rust
-lspconfig.rust_analyzer.setup({
-  on_attach = lspformat.on_attach,
-  capabilities = capabilities
-})
