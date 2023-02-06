@@ -17,6 +17,7 @@ lspconfig.clangd.setup({
 })
 
 -- go
+vim.env.PATH = vim.env.PATH .. vim.fn.expand(':$HOME/go/bin')
 lspconfig.gopls.setup({
   on_attach = lspformat.on_attach,
   capabilities = capabilities
