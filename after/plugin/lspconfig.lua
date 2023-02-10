@@ -6,42 +6,41 @@ vim.diagnostic.config({ signs = false })
 
 -- bash
 lspconfig.bashls.setup({
-  on_attach = lspformat.on_attach,
-  capabilities = capabilities
+    on_attach = lspformat.on_attach,
+    capabilities = capabilities
 })
 
 -- c and c++
 lspconfig.clangd.setup({
-  on_attach = lspformat.on_attach,
-  capabilities = capabilities
+    on_attach = lspformat.on_attach,
+    capabilities = capabilities
 })
 
 -- go
-vim.env.PATH = vim.env.PATH .. vim.fn.expand(':$HOME/go/bin')
 lspconfig.gopls.setup({
-  on_attach = lspformat.on_attach,
-  capabilities = capabilities
+    on_attach = lspformat.on_attach,
+    capabilities = capabilities
 })
 
 -- lua
 lspconfig.sumneko_lua.setup({
-  on_attach = lspformat.on_attach,
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      format = {
-        enable = true,
-        defaultConfig = {
-          indent_style = "space",
-          indent_size = "2"
+    on_attach = lspformat.on_attach,
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            format = {
+                enable = true,
+                defaultConfig = {
+                    indent_style = "space",
+                    indent_size = "2"
+                }
+            },
+            diagnostics = {
+                globals = { "vim" }
+            },
+            telemetry = {
+                enable = false
+            }
         }
-      },
-      diagnostics = {
-        globals = { "vim" }
-      },
-      telemetry = {
-        enable = false
-      }
     }
-  }
 })
