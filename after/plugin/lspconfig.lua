@@ -23,7 +23,7 @@ lspconfig.gopls.setup({
 })
 
 -- lua
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
     on_attach = lspformat.on_attach,
     capabilities = capabilities,
     settings = {
